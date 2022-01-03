@@ -1,0 +1,8 @@
+<p th:if="${session.signup} != null" 
+th:text="${session.signup.userId} + '님 반갑습니다.'"></p>
+<p th:unless="${session.signup} != null">
+    로그인되어 있지 않습니다.
+</p>
+<form action="/logout" method="post">
+    <input type="submit" value="로그아웃">
+</form>
